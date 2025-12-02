@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/styels.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: "#f8ede3",
+                        primary: "#000000",
+                        gold: "#c39e6d",
+                    },
+                    container: {
+                        center: true,
+                        screens: {
+                            DEFAULT: "1300px",
+                        },
+                    },
+                    fontFamily: {
+                        PlayFair: ["Playfair Display", "sans-serif"],
+                        lora: ["Lora", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <!-- PreHeader Section -->
+    <div class="bg-gold/30 py-2 pre-header">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-end items-center gap-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D"
+                    target="_blank" rel="noopener noreferrer"
+                    class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sedratravelinc?mibextid=LQQJ4d" target="_blank"
+                    rel="noopener noreferrer" class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our Facebook">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@sedratravelinc?_t=ZP-8s0Y4iuHXo6&_r=1" target="_blank"
+                    rel="noopener noreferrer" class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-primary sticky top-0 right-0 w-full z-50 shadow-lg ">
+        <nav class=" w-full container mx-auto px-4">
+            <div class="flex items-center justify-between gap-8 lg:justify-center md:gap-28 h-20">
+
+                <!-- Left Navigation - Desktop -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="mediaCenter.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Media
+                        Center</a>
+                    <a href="about.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">About</a>
+                    <a href="destinations.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Destinations</a>
+                </div>
+
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center justify-center">
+                    <img src="./assets/images/sedraLogo.png" class="w-32 h-11" alt="sedra Travel">
+                </a>
+
+                <!-- Right Navigation - Desktop -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="packages.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Packages</a>
+                    <a href="contact.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Contact</a>
+                    <a href="blog.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-accent" aria-label="Toggle menu">
+                    <!-- Menu icon -->
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- X icon (hidden by default) -->
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" width="24" height="24" class="hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="absolute z-50 px-4 h-screen bg-primary w-full lg:hidden hidden py-4 border-t border-gold/20">
+            <div class="flex flex-col gap-8">
+                <a href="mediaCenter.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Media
+                    Center</a>
+                <a href="about.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">About</a>
+                <a href="destinations.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Destinations</a>
+                <a href="packages.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Packages</a>
+                <a href="contact.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Contact</a>
+                <a href="blog.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Blog</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="relative h-[60vh] overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1600&q=80" alt="Santorini"
+            class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-accent via-accent/40 to-transparent"></div>
+
+        <div class="absolute bottom-6 left-0 right-0 container mx-auto px-4">
+            <p class="flex items-center gap-2 text-primary mb-2 text-lg">
+                <i class="fa-solid fa-map-pin"></i> Egypt
+            </p>
+            <h1 class="text-5xl md:text-7xl font-bold text-primary">
+                Egypt
+            </h1>
+        </div>
+    </section>
+
+
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+            <!-- Left Column -->
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold mb-6">About Egypt</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Explore the land of pharaohs and timeless wonders with our carefully selected collection of the best
+                    Egypt tours. Whether you're drawn to the ancient Pyramids of Giza, the majestic temples of Luxor and
+                    Karnak, or the serene beauty of a Nile River cruise, our expertly crafted Egypt tours offer
+                    something for every kind of traveler.
+
+                    Step back in time as you visit legendary sites like the Sphinx, Luxor and Karnak Temples, the Valley
+                    of the Kings, and Abu Simbel. Wander through bustling local markets, explore historic mosques and
+                    Coptic churches, and experience the vibrant culture and warm hospitality that make tours to Egypt
+                    truly unforgettable.
+
+                    Our Egypt tours combine history, adventure, and relaxation, with flexible options to suit your
+                    style, whether you're looking for a small group tour, a private guided trip, or a luxury escape.
+                    With comfortable accommodations, expert Egyptologist guides, and seamless travel logistics, every
+                    detail is taken care of so you can focus on the experience.
+
+                    From cruising the Nile in style to discovering hidden gems off the beaten path, our best Egypt tours
+                    promise a journey filled with unforgettable moments. Let us help you uncover the magic of Egypt with
+                    personalized service and unforgettable itineraries tailored to your travel dreams.
+
+                    Start planning your adventure today with one of our top-rated tours to Egypt, and let history come
+                    to life before your eyes.
+                </p>
+
+                <!-- Highlights -->
+                <h3 class="text-2xl font-bold mb-6">Highlights & Attractions</h3>
+                <ul class="space-y-3 mb-12 text-gray-600">
+                    <li class="flex gap-3"><span class="text-primary">•</span> Visit the iconic blue-domed churches of
+                        Oia</li>
+                    <li class="flex gap-3"><span class="text-primary">•</span> Watch unforgettable sunsets from Oia
+                        Castle</li>
+                    <li class="flex gap-3"><span class="text-primary">•</span> Explore the archaeological site of
+                        Akrotiri</li>
+                    <li class="flex gap-3"><span class="text-primary">•</span> Relax on volcanic black sand beaches
+                    </li>
+                    <li class="flex gap-3"><span class="text-primary">•</span> Taste world-class wines</li>
+                </ul>
+
+                <!-- Gallery -->
+                <h3 class="text-2xl font-bold mb-6">Gallery</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+                    <img class="rounded-lg w-full h-48 object-cover" src="./assets/images/EgyptTours.webp" />
+                    <img class="rounded-lg w-full h-48 object-cover" src="./assets/images/EgyptTours.webp" />
+                    <img class="rounded-lg w-full h-48 object-cover" src="./assets/images/EgyptTours.webp" />
+                </div>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="lg:sticky top-24 bg-gray-50 border rounded-xl p-6 shadow-md h-fit">
+                <h3 class="text-xl font-bold mb-4">Plan Your Visit</h3>
+                <p class="text-gray-600 mb-6">
+                    Ready to experience Santorini? Contact us to customize your perfect trip.
+                </p>
+
+                <a href="contact.html"
+                    class="block w-full text-center bg-gold hover:bg-primary text-white py-3 rounded-md font-medium mb-4">
+                    Contact Us
+                </a>
+
+                <a href="packages.html"
+                    class="block w-full text-center border border-gold text-gold hover:bg-gold hover:text-white transition py-3 rounded-md font-medium">
+                    View All Packages
+                </a>
+            </aside>
+
+        </div>
+
+        <!--  Related Packages -->
+        <div class="mt-20">
+            <h2 class="text-3xl font-bold mb-8">Travel Packages to Egypt</h2>
+
+            <div class="relative max-w-8xl mx-auto">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Card 1 -->
+                        <a href="packagesDetails.html"
+                            class="swiper-slide group bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                            <img class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" />
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-2">Egypt Classic Tours: Best Egypt Trips</h3>
+                                <p class="text-gray-600 mb-3"><i class="fa-solid fa-stopwatch"></i> 7 Days</p>
+                                <p class="text-sm text-gray-500">Starting from</p>
+                                <p class="text-3xl font-bold text-gold">$1,899</p>
+                                <div class="w-full flex justify-end">
+                                    <button class="flex items-center text-white bg-primary px-4 py-2 rounded-md font-medium
+                transition-all duration-300 group-hover:bg-primary-dark">
+                                        View Details
+                                        <i class="fa-solid fa-arrow-right-long text-[20px] ml-2 transition-transform duration-300
+                  group-hover:translate-x-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <a href=""
+                            class="swiper-slide group bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                            <img class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://images.unsplash.com/photo-1601581987809-a874a81309c9?w=800&q=80" />
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-2">Egypt Classic Tours: Best Egypt Trips</h3>
+                                <p class="text-gray-600 mb-3 flex items-center gap-2"><i
+                                        class="fa-solid fa-stopwatch"></i>
+                                    10 Days</p>
+                                <p class="text-sm text-gray-500">Starting from</p>
+                                <p class="text-3xl font-bold text-gold mb-4">$2,599</p>
+                                <div class="w-full flex justify-end">
+                                    <button class="flex items-center text-white bg-primary px-4 py-2 rounded-md font-medium
+                transition-all duration-300 group-hover:bg-primary-dark">
+                                        View Details
+                                        <i class="fa-solid fa-arrow-right-long text-[20px] ml-2 transition-transform duration-300
+                  group-hover:translate-x-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 1 -->
+                        <a href="packagesDetails.html"
+                            class="swiper-slide group bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                            <img class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" />
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-2">Egypt Classic Tours: Best Egypt Trips</h3>
+                                <p class="text-gray-600 mb-3"><i class="fa-solid fa-stopwatch"></i> 7 Days</p>
+                                <p class="text-sm text-gray-500">Starting from</p>
+                                <p class="text-3xl font-bold text-gold">$1,899</p>
+                                <div class="w-full flex justify-end">
+                                    <button class="flex items-center text-white bg-primary px-4 py-2 rounded-md font-medium
+                transition-all duration-300 group-hover:bg-primary-dark">
+                                        View Details
+                                        <i class="fa-solid fa-arrow-right-long text-[20px] ml-2 transition-transform duration-300
+                  group-hover:translate-x-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <!-- Card 2 -->
+                        <a href=""
+                            class="swiper-slide group bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                            <img class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://images.unsplash.com/photo-1601581987809-a874a81309c9?w=800&q=80" />
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-2">Egypt Classic Tours: Best Egypt Trips</h3>
+                                <p class="text-gray-600 mb-3 flex items-center gap-2"><i
+                                        class="fa-solid fa-stopwatch"></i>
+                                    10 Days</p>
+                                <p class="text-sm text-gray-500">Starting from</p>
+                                <p class="text-3xl font-bold text-gold mb-4">$2,599</p>
+                                <div class="w-full flex justify-end">
+                                    <button class="flex items-center text-white bg-primary px-4 py-2 rounded-md font-medium
+                transition-all duration-300 group-hover:bg-primary-dark">
+                                        View Details
+                                        <i class="fa-solid fa-arrow-right-long text-[20px] ml-2 transition-transform duration-300
+                  group-hover:translate-x-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <!-- Floating Arrows -->
+                <button class="swiper-button-prev-destpac absolute top-1/2 -translate-y-1/2 -left-3 md:-left-4  xl:-left-12
+                w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white/90
+                text-primary hover:bg-primary hover:text-white shadow-xl
+                transition-all duration-300 z-30">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+
+                <button class="swiper-button-next-destpac absolute top-1/2 -translate-y-1/2 -right-3 md:-right-4  xl:-right-12
+                w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/90
+                text-primary hover:bg-primary hover:text-white shadow-xl
+                transition-all duration-300 z-30">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-accent pt-12 pb-2">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Logo and Description -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-1">
+                        <img src="./assets/images/sedraLogo.png" class="w-32 h-11" alt="sedra Travel">
+                    </div>
+                    <p class="font-Lora text-accent/70 text-sm leading-relaxed">
+                        At Sedra Travel, our mission is to be the most trusted and reliable partner for Muslims in the
+                        USA embarking on their sacred journeys of Umrah and Hajj. We aim to inspire and support our
+                        community by providing seamless, spiritually enriching, and unforgettable travel experiences
+                        that honor the significance of these holy pilgrimages.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-PlayFair text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 font-Lora text-sm">
+                        <li><a href="about.html" class="text-accent/70 hover:text-gold transition-colors">About Us</a>
+                        </li>
+                        <li><a href="faq.html" class="text-accent/70 hover:text-gold transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-accent/70 hover:text-gold transition-colors">Contact</a>
+                        </li>
+                        <li><a href="packages.html"
+                                class="text-accent/70 hover:text-gold transition-colors">Packages</a>
+                        </li>
+                        <li><a href="destinations.html"
+                                class="text-accent/70 hover:text-gold transition-colors">Destinations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-PlayFair text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-2 font-Lora text-sm text-accent/70">
+                        <li><a href="tel:+1234567890" class="hover:text-gold transition-colors"> +1 (626) 353-4268</a>
+                        </li>
+                        <li><a href="mailto:Sedratravelinc@gmail.com"
+                                class="hover:text-gold transition-colors">Sedratravelinc@gmail.com</a>
+                        </li>
+                        <li class="pt-4">
+                            <div class="flex gap-4">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D"
+                                    target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our Instagram">
+                                    <i class="fa-brands fa-instagram text-[20px]"></i>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/sedratravelinc?mibextid=LQQJ4d" target="_blank"
+                                    rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our Facebook">
+                                    <i class="fa-brands fa-square-facebook text-[20px]"></i>
+                                </a>
+                                <!-- TikTok -->
+                                <a href="https://www.tiktok.com/@sedratravelinc?_t=ZP-8s0Y4iuHXo6&_r=1" target="_blank"
+                                    rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our TikTok">
+                                    <i class="fa-brands fa-tiktok text-[20px]"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container h-px w-full bg-accent/20 mb-2"></div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center text-xs text-accent/60">
+                Copyright © 2025 Sedra Travel . All Right Reserved. Powered By
+                <a href="https://www.mv-is.com/" target="_blank">
+                    Master Vision Integrated Solutions
+                </a> &
+                <a href="https://www.wedo-eg.com/en" target="_blank">
+                    We Do
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

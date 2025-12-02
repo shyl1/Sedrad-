@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>packages details</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/styels.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: "#f8ede3",
+                        primary: "#000000",
+                        gold: "#c39e6d",
+                    },
+                    container: {
+                        center: true,
+                        screens: {
+                            DEFAULT: "1300px",
+                        },
+                    },
+                    fontFamily: {
+                        PlayFair: ["Playfair Display", "sans-serif"],
+                        lora: ["Lora", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <!-- PreHeader Section -->
+    <div class="bg-gold/30 py-2 pre-header">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-end items-center gap-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" rel="noopener noreferrer"
+                    class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sedratravelinc?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer"
+                    class="text-primary hover:text-gold transition-colors duration-300" aria-label="Visit our Facebook">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@sedratravelinc?_t=ZP-8s0Y4iuHXo6&_r=1" target="_blank" rel="noopener noreferrer"
+                    class="text-primary hover:text-gold transition-colors duration-300" aria-label="Visit our TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-primary sticky top-0 right-0 w-full z-50 shadow-lg ">
+        <nav class=" w-full container mx-auto px-4">
+            <div class="flex items-center justify-between gap-8 lg:justify-center md:gap-28 h-20">
+
+                <!-- Left Navigation - Desktop -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="mediaCenter.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Media
+                        Center</a>
+                    <a href="about.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">About</a>
+                    <a href="destinations.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Destinations</a>
+                </div>
+
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center justify-center">
+                    <img src="./assets/images/sedraLogo.png" class="w-32 h-11" alt="sedra Travel">
+                </a>
+
+                <!-- Right Navigation - Desktop -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="packages.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Packages</a>
+                    <a href="contact.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Contact</a>
+                    <a href="blog.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-accent" aria-label="Toggle menu">
+                    <!-- Menu icon -->
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- X icon (hidden by default) -->
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" width="24" height="24" class="hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="absolute z-50 px-4 h-screen bg-primary w-full lg:hidden hidden py-4 border-t border-gold/20">
+            <div class="flex flex-col gap-8">
+                <a href="mediaCenter.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Media
+                    Center</a>
+                <a href="about.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">About</a>
+                <a href="destinations.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Destinations</a>
+                <a href="packages.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Packages</a>
+                <a href="contact.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Contact</a>
+                <a href="blog.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Blog</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <div class="relative h-[60vh] overflow-hidden">
+        <img src="./assets/images/EgyptTours.webp" alt="Egypt"
+            class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-accent/70 via-accent/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 container mx-auto px-4 pb-12 text-primary">
+            <div class="flex items-center gap-2 text-primary mb-4">
+                <i class="fa-solid fa-map-pin text-xl"></i>
+                <span class="text-xl">Egypt</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Trip to Egypt: Pyramids & Nile by Air</h1>
+            <div class="flex flex-wrap gap-6 text-lg">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>10 Days / 9 Nights</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-users"></i>
+                    <span>12-16 People</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+        <!-- Left Column -->
+        <div class="lg:col-span-2">
+
+            <!-- Package Overview -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Package Overview</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Step into a world of elegance with our carefully designed Egypt Luxury Tours, created for discerning travelers who seek comfort and exclusivity. From Cairo’s legendary Pyramids of Giza and the treasures of the Grand Egyptian Museum to the serene beauty of a deluxe Nile cruise, each journey blends history with sophistication. Stay in handpicked 5-star hotels, enjoy private guided tours, and experience Egypt’s most iconic sites at a pace tailored to you. Whether exploring Luxor’s grand temples, sailing between Aswan’s scenic landscapes, or strolling through the vibrant streets of Cairo, every detail of your tour is designed for an unforgettable luxury travel experience. Pick your tour from our collection and experience the pinnacle of Egyptian travel with our Egypt luxury tours, meticulously crafted for sophisticated travelers who demand excellence.
+                </p>
+            </section>
+
+            <!-- Gallery -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="relative h-64 rounded-lg overflow-hidden group">
+                        <img src="./assets/images/EgyptTour.webp"
+                            alt="Gallery 1"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="relative h-64 rounded-lg overflow-hidden group">
+                        <img src="./assets/images/EgyptTou.webp" alt="Gallery 2"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="relative h-64 rounded-lg overflow-hidden group">
+                        <img src="./assets/images/EgyptTour.webp"
+                            alt="Gallery 3"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Itinerary -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Day-by-Day Itinerary</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">D1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Arrival in Cairo</h3>
+                                <p class="text-gray-700">Welcome to the mystical lands of Egypt, where the Pharaohs ruled for thousands of years. Upon your arrival at Cairo International Airport, your tour manager will meet and assist you and ease the process by helping you to get the entry visa. You will then be escorted through the bustling streets of Cairo in an exclusive air-conditioned vehicle. Once you reach your chosen hotel according to your accommodation plan whether it will be overlooking the Great Pyramids of Giza like Hilton Pyramids Golf Hotel or in Khan El Khalili, like Le Riad Luxury Boutique Hotel, your tour manager will assist you with your check-in and double-check your itinerary with you to establish and confirm all the pick-up times for all your activities during your trip.
+Overnight in Cairo.
+Welcome drink included.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">D2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Pyramids and GEM</h3>
+                                <p class="text-gray-700">After enjoying a delicious wholesome breakfast at your hotel, your personal guide will take you to the Giza Plateau to start your journey by marveling at one of the Seven Wonders of the World, the Great Pyramids of Giza. Visit the iconic Sphinx and Valley Temple. After your pyramid visit, you’ll go for lunch at an authentic Egyptian restaurant and then head over to the New Grand Egyptian Museum, also known as the Giza Museum, which is an archaeological museum in Giza, Egypt, about 2 kilometers (1.2 miles) from the Giza pyramid complex. Return back to your hotel.
+
+
+Overnight in Cairo.
+
+Meals: Breakfast, Lunch.
+
+Visits: Great Pyramids of Giza, Sphinx, Valley Temple, Grand Egyptian Museum (GEM).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">D3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2"> Fly to Luxor - East Bank Sightseeing</h3>
+                                <p class="text-gray-700">Today, you will be leaving Cairo and head out to the shining city of Luxor. You will meet your tour manager early in the morning at your hotel where he will accompany you to Cairo International Airport for your trip to Luxor. Upon landing in Luxor, you will be assisted and whisked away in an exclusive air-conditioned vehicle to board your luxurious Nile cruise, Salacia, that will offer you a unique experience cruising on the Nile with high-quality service, gastronomy, and accommodation during your stay. Enjoy a delicious lunch on board before heading out to your first stop in Upper Egypt which is visiting Karnak Temple and Luxor Temple at the East Bank. Return back to your cruise and enjoy a warm and hand-crafted dinner.
+
+Overnight aboard your cruise in Luxor.
+
+Meals: Breakfast, Lunch, Dinner.
+
+Visits: Karnak Temple, Luxor Temple.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">D4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">West Bank Sightseeing</h3>
+                                <p class="text-gray-700">Enjoy your first breakfast on board your cruise surrounded by the calm waters of the Nile. After breakfast, head out to explore the West Bank of Luxor. Visit the Royal Cemetery for 62 Pharaohs, the Valley of the Kings, then head to the Mortuary Temple of Queen Hatshepsut, which was built by the architects of the New Kingdom during the 15th century BCE at Deir El-Bahari. Finish the day as you marvel at the towering Colossi of Memnon. After finishing your visits at the West Bank, return back to your cruise and start sailing to Edfu while enjoying a delicious lunch on board. Relax the rest of the day as you sail; take advantage of the amazing facilities of your cruise; enjoy some afternoon tea, get a massage, de-stress in the Jacuzzi. End the day with an appetizing dinner on board.
+
+Overnight aboard your cruise in Edfu.
+
+Meals: Breakfast, Lunch, Dinner.
+
+Visits: Royal Cemetery, the Valley of the Kings, Temple of Queen Hatshepsut, Colossi of Memnon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Included / Excluded -->
+            <section class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">What's Included</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            <span>Meet and greet service by our representatives upon your airport arrival</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            <span>All transfers via private air-conditioned vehicle</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            <span>Domestic flight tickets from Cairo to Luxor and Aswan to Cairo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            <span>Accommodation for 3 nights in Cairo, including daily breakfast</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            <span>Accommodation for 4 nights on a 5-star superior Nile Cruise ship, full board</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-600 mt-1"></i>
+                            <span>Airport transfers</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">What's Not Included</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-600 mt-1"></i>
+                            <span>International Airfare</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-600 mt-1"></i>
+                            <span>Entry visa to Egypt</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-600 mt-1"></i>
+                            <span>Any optional tours</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-600 mt-1"></i>
+                            <span>Personal spending</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-600 mt-1"></i>
+                            <span>Tipping</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Pricing -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Pricing</h2>
+                <table class="w-full border-collapse">
+                    <tr class="border-b">
+                        <td class="p-4 font-medium">Per Person (Double Occupancy)</td>
+                        <td class="p-4 text-right text-2xl font-bold text-primary">$2,499</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4 font-medium">Single Supplement</td>
+                        <td class="p-4 text-right text-2xl font-bold text-primary">+$699</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-medium">Child (6-12 years)</td>
+                        <td class="p-4 text-right text-2xl font-bold text-primary">$1,899</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Payment Terms -->
+            <section>
+                <h2 class="text-3xl font-bold mb-6">Payment Terms</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                        <span class="text-gray-700">Deposit: $500 per person at booking</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                        <span class="text-gray-700">Balance: Due 60 days before departure</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                        <span class="text-gray-700">Cancellation: Full refund if cancelled 90+ days before
+                            departure</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                        <span class="text-gray-700">Payment methods: Credit card, bank transfer, or PayPal</span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+            <div class="sticky top-24 bg-white shadow p-6 rounded-lg">
+                <div class="text-center mb-6">
+                    <p class="text-gray-500 mb-2">Starting from</p>
+                    <p class="text-5xl font-bold text-primary">$2,499</p>
+                    <p class="text-sm text-gray-500 mt-1">per person</p>
+                </div>
+                <a href="contact.html" class="block mb-4">
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold">Book This
+                        Package</button>
+                </a>
+                <a href="contact.html" class="block">
+                    <button class="w-full border border-primary text-primary py-3 rounded-lg font-semibold">Request
+                        Custom Quote</button>
+                </a>
+                <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+                    <h4 class="font-semibold mb-3">Need Help?</h4>
+                    <p class="text-sm text-gray-700 mb-4">Our travel experts are ready to assist you with any questions.
+                    </p>
+                    <a href="contact.html">
+                        <button class="w-full border border-gray-300 py-2 rounded-lg">Contact Us</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-accent pt-12 pb-2">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Logo and Description -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-1">
+                        <img src="./assets/images/sedraLogo.png" class="w-32 h-11" alt="sedra Travel">
+                    </div>
+                    <p class="font-Lora text-accent/70 text-sm leading-relaxed">
+                        At Sedra Travel, our mission is to be the most trusted and reliable partner for Muslims in the
+                        USA embarking on their sacred journeys of Umrah and Hajj. We aim to inspire and support our
+                        community by providing seamless, spiritually enriching, and unforgettable travel experiences
+                        that honor the significance of these holy pilgrimages.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-PlayFair text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 font-Lora text-sm">
+                        <li><a href="about.html" class="text-accent/70 hover:text-gold transition-colors">About Us</a>
+                        </li>
+                        <li><a href="faq.html" class="text-accent/70 hover:text-gold transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-accent/70 hover:text-gold transition-colors">Contact</a>
+                        </li>
+                        <li><a href="packages.html"
+                                class="text-accent/70 hover:text-gold transition-colors">Packages</a>
+                        </li>
+                        <li><a href="destinations.html"
+                                class="text-accent/70 hover:text-gold transition-colors">Destinations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-PlayFair text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-2 font-Lora text-sm text-accent/70">
+                        <li><a href="tel:+1234567890" class="hover:text-gold transition-colors"> +1 (626) 353-4268</a>
+                        </li>
+                        <li><a href="mailto:Sedratravelinc@gmail.com"
+                                class="hover:text-gold transition-colors">Sedratravelinc@gmail.com</a>
+                        </li>
+                        <li class="pt-4">
+                            <div class="flex gap-4">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D"
+                                    target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our Instagram">
+                                    <i class="fa-brands fa-instagram text-[20px]"></i>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/sedratravelinc?mibextid=LQQJ4d" target="_blank"
+                                    rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our Facebook">
+                                    <i class="fa-brands fa-square-facebook text-[20px]"></i>
+                                </a>
+                                <!-- TikTok -->
+                                <a href="https://www.tiktok.com/@sedratravelinc?_t=ZP-8s0Y4iuHXo6&_r=1" target="_blank"
+                                    rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our TikTok">
+                                    <i class="fa-brands fa-tiktok text-[20px]"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container h-px w-full bg-accent/20 mb-2"></div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center text-xs text-accent/60">
+                Copyright © 2025 Sedra Travel . All Right Reserved. Powered By
+                <a href="https://www.mv-is.com/" target="_blank">
+                    Master Vision Integrated Solutions
+                </a> &
+                <a href="https://www.wedo-eg.com/en" target="_blank">
+                    We Do
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
