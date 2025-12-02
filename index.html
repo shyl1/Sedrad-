@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="././assets/images/thomascook.webp" type="image/webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedra Travel Agency</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/styels.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: "#f8ede3",
+                        primary: "#000000",
+                        gold: "#c39e6d",
+                    },
+                    container: {
+                        center: true,
+                        screens: {
+                            DEFAULT: "1300px",
+                        },
+                    },
+                    fontFamily: {
+                        PlayFair: ["Playfair Display", "sans-serif"],
+                        lora: ["Lora", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <!-- PreHeader Section -->
+    <div class="bg-gold/30 py-2 pre-header">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-end items-center gap-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D"
+                    target="_blank" rel="noopener noreferrer"
+                    class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sedratravelinc?mibextid=LQQJ4d" target="_blank"
+                    rel="noopener noreferrer" class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our Facebook">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@sedratravelinc?_t=ZP-8s0Y4iuHXo6&_r=1" target="_blank"
+                    rel="noopener noreferrer" class="text-primary hover:text-gold transition-colors duration-300"
+                    aria-label="Visit our TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-primary sticky top-0 right-0 w-full z-50 shadow-lg ">
+        <nav class=" w-full container mx-auto px-4">
+            <div class="flex items-center justify-between gap-8 lg:justify-center md:gap-28 h-20">
+
+                <!-- Left Navigation - Desktop -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="mediaCenter.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Media
+                        Center</a>
+                    <a href="about.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">About</a>
+                    <a href="destinations.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Destinations</a>
+                </div>
+
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center justify-center">
+                    <img src="./assets/images/sedraLogo.png" class="w-32 h-11" alt="sedra Travel">
+                </a>
+
+                <!-- Right Navigation - Desktop -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="packages.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Packages</a>
+                    <a href="contact.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Contact</a>
+                    <a href="blog.html"
+                        class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Blog</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-accent" aria-label="Toggle menu">
+                    <!-- Menu icon -->
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- X icon (hidden by default) -->
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" width="24" height="24" class="hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="absolute z-50 px-4 h-screen bg-primary w-full lg:hidden hidden py-4 border-t border-gold/20">
+            <div class="flex flex-col gap-8">
+                <a href="mediaCenter.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Media
+                    Center</a>
+                <a href="about.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">About</a>
+                <a href="destinations.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Destinations</a>
+                <a href="packages.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Packages</a>
+                <a href="contact.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Contact</a>
+                <a href="blog.html"
+                    class="text-accent hover:text-gold transition-colors duration-300 font-lora text-sm uppercase tracking-wide">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen w-full overflow-hidden">
+
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover"
+            poster="hero-poster.jpg">
+            <source src="./assets/images/herovid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/80"></div>
+
+        <!-- Content -->
+        <div class="relative h-full flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl animate-fade-in">
+                <h1 class="font-PlayFair text-5xl md:text-7xl lg:text-8xl font-bold text-accent mb-6">
+                    Discover Your Dream<br>
+                    <span class="text-gold">Destination</span>
+                </h1>
+                <p class="font-lora text-lg md:text-xl text-accent/90 mb-8 max-w-2xl mx-auto">
+                    Experience the world's most extraordinary places with personalized luxury travel packages crafted
+                    just for you
+                </p>
+                <a href="packages.html"
+                    class="inline-flex items-center justify-center bg-gold hover:bg-gold/90 text-primary font-lora text-base px-6 py-3 rounded uppercase tracking-wider group transition-all duration-300">
+                    Explore Packages
+                    <!-- Arrow Right Icon -->
+                    <i
+                        class="fa-solid fa-arrow-right-long text-[20px] transition-transform group-hover:translate-x-1 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- packages -->
+    <section id="packages" class="py-20 relative bg-background overflow-hidden">
+        <div class="container mx-auto px-4">
+
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-foreground mb-4">
+                    Luxury Travel <span class="text-gold">Packages</span>
+                </h2>
+                <p class="font-lora text-muted-foreground text-lg max-w-2xl mx-auto">
+                    Curated experiences designed for unforgettable memories
+                </p>
+            </div>
+
+            <!-- WRAPPER = allows arrows to float -->
+            <div class="relative max-w-8xl mx-auto">
+
+                <!-- Swiper Carousel -->
+                <div class="swiper swiper-pac max-sm:w-[350px] max-w-8xl overflow-hidden mx-auto">
+                    <div class="swiper-wrapper">
+
+                        <!-- Package Item 1 -->
+                        <div class="swiper-slide w-full lg:w-[300px]">
+                            <div
+                                class="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="./assets/images/EgyptTours.webp" alt="Maldives Paradise"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                        loading="lazy">
+                                    <div
+                                        class="absolute top-4 right-4 bg-gold text-primary px-4 py-2 font-PlayFair font-bold text-lg">
+                                        From $3,499
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-PlayFair text-2xl font-bold text-foreground mb-3">Trip to Egypt:
+                                        Pyramids & Nile by Air</h3>
+                                    <p class="font-lora text-muted-foreground mb-4 max-lines-card">
+                                        Combine the rich heritage of Cairo with a magical 5-day Nile cruise on this
+                                        Egypt vacation package—a must for any lover of history. Experience the best
+                                        Egypt tour, visiting all of Egypt’s top highlights attractions scattered across
+                                        the desert and range from famous pyramids to forgotten temples only in 8 days.
+                                    </p>
+                                    <div class="space-y-2 mb-4">
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <!-- Calendar Icon -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span class="font-lora">7 Days / 6 Nights</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <!-- Users Icon -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                            </svg>
+                                            <span class="font-lora">2-4 People</span>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="w-full inline-block bg-primary hover:bg-primary/90 text-accent font-lora uppercase tracking-wide text-center py-3">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package Item 2 -->
+                        <div class="swiper-slide  w-full lg:w-[300px]">
+                            <div
+                                class="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="./assets/images/ValleyoftheKings.webp" alt="European Highlights"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                        loading="lazy">
+                                    <div
+                                        class="absolute top-4 right-4 bg-gold text-primary px-4 py-2 font-PlayFair font-bold text-lg">
+                                        From $4,299
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-PlayFair text-2xl font-bold text-foreground mb-3">5 Days Trip to
+                                        Egypt: Cairo and Luxor
+                                    </h3>
+                                    <p class="font-lora text-muted-foreground mb-4 max-lines-card">Spend 5 days
+                                        exploring the attractions of Cairo and Luxor. On private guided tours, you will
+                                        start your trip in Cairo. This is where you visit the iconic Great Pyramids of
+                                        Giza and the Sphinx. After that you will tour the Grand Egyptian Museum. </p>
+                                    <div class="space-y-2 mb-4">
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span class="font-lora">10 Days / 9 Nights</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                            </svg>
+                                            <span class="font-lora">2-6 People</span>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="w-full inline-block bg-primary hover:bg-primary/90 text-accent font-lora uppercase tracking-wide text-center py-3">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package Item 3 -->
+                        <div class="swiper-slide w-full lg:w-[300px]">
+                            <div
+                                class="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="./assets/images/EgyptTours.webp" alt="Maldives Paradise"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                        loading="lazy">
+                                    <div
+                                        class="absolute top-4 right-4 bg-gold text-primary px-4 py-2 font-PlayFair font-bold text-lg">
+                                        From $3,499
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-PlayFair text-2xl font-bold text-foreground mb-3">Trip to Egypt:
+                                        Pyramids & Nile by Air</h3>
+                                    <p class="font-lora text-muted-foreground mb-4 max-lines-card">
+                                        Combine the rich heritage of Cairo with a magical 5-day Nile cruise on this
+                                        Egypt vacation package—a must for any lover of history. Experience the best
+                                        Egypt tour, visiting all of Egypt’s top highlights attractions scattered across
+                                        the desert and range from famous pyramids to forgotten temples only in 8 days.
+                                    </p>
+                                    <div class="space-y-2 mb-4">
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <!-- Calendar Icon -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span class="font-lora">7 Days / 6 Nights</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <!-- Users Icon -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                            </svg>
+                                            <span class="font-lora">2-4 People</span>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="w-full inline-block bg-primary hover:bg-primary/90 text-accent font-lora uppercase tracking-wide text-center py-3">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package Item 4 -->
+                        <div class="swiper-slide  w-full lg:w-[300px]">
+                            <div
+                                class="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="./assets/images/ValleyoftheKings.webp" alt="European Highlights"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                        loading="lazy">
+                                    <div
+                                        class="absolute top-4 right-4 bg-gold text-primary px-4 py-2 font-PlayFair font-bold text-lg">
+                                        From $4,299
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-PlayFair text-2xl font-bold text-foreground mb-3">5 Days Trip to
+                                        Egypt: Cairo and Luxor
+                                    </h3>
+                                    <p class="font-lora text-muted-foreground mb-4 max-lines-card">Spend 5 days
+                                        exploring the attractions of Cairo and Luxor. On private guided tours, you will
+                                        start your trip in Cairo. This is where you visit the iconic Great Pyramids of
+                                        Giza and the Sphinx. After that you will tour the Grand Egyptian Museum. </p>
+                                    <div class="space-y-2 mb-4">
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span class="font-lora">10 Days / 9 Nights</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" width="16" height="16" class="text-gold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                            </svg>
+                                            <span class="font-lora">2-6 People</span>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="w-full inline-block bg-primary hover:bg-primary/90 text-accent font-lora uppercase tracking-wide text-center py-3">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Arrows -->
+                <button class="swiper-button-prev-pac absolute top-1/2 -translate-y-1/2 -left-3 md:-left-4  xl:-left-12
+                w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white/90
+                text-primary hover:bg-primary hover:text-white shadow-xl
+                transition-all duration-300 z-30">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+
+                <button class="swiper-button-next-pac absolute top-1/2 -translate-y-1/2 -right-3 md:-right-4  xl:-right-12
+                w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/90
+                text-primary hover:bg-primary hover:text-white shadow-xl
+                transition-all duration-300 z-30">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-20 relative bg-primary overflow-hidden">
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-accent mb-4">
+                    Top <span class="text-gold">Destinations</span>
+                </h2>
+                <p class="font-lora text-accent/80 text-lg max-w-2xl mx-auto">
+                    Discover the world's most sought-after locations
+                </p>
+            </div>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper swiper-des  mx-auto max-w-8xl overflow-hidden">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-start gap-4 mb-6">
+                    <button
+                        class="swiper-button-next-des w-10 h-10 flex items-center justify-center rounded-full border border-gold text-gold hover:text-white hover:bg-gold/90 shadow-md transition">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button
+                        class="swiper-button-prev-des w-10 h-10 flex items-center justify-center rounded-full border border-gold text-gold hover:text-white hover:bg-gold/90 shadow-md transition">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="swiper-wrapper">
+                    <!-- Destination 1 -->
+                    <div class="swiper-slide lg:w-[300px]">
+                        <div class="overflow-hidden border-none bg-transparent group cursor-pointer rounded-lg">
+                            <div class="relative h-96 overflow-hidden rounded-lg">
+                                <img src="./assets/images/ValleyoftheKings.webp" alt="Santorini, Greece"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-accent">
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <!-- MapPin Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" width="16" height="16">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 11c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.344-3 3 1.344 3 3 3z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" />
+                                        </svg>
+                                        <span class="text-sm font-lora">12k+ travelers</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <span class="text-sm font-lora">Aswan</span>
+                                    </div>
+                                    <h3 class="font-PlayFair text-2xl font-bold mb-2">Best Egypt Tours 2025 / 2026</h3>
+                                    <p class="font-lora text-sm text-accent/90 max-lines-dest">Step into a world of
+                                        elegance with our carefully designed Egypt Luxury Tours, </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination 2 -->
+                    <div class="swiper-slide lg:w-[300px]">
+                        <div class="overflow-hidden border-none bg-transparent group cursor-pointer rounded-lg">
+                            <div class="relative h-96 overflow-hidden rounded-lg">
+                                <img src="./assets/images/EgyptTours.webp" alt="Maldives"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-accent">
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" width="16" height="16">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 11c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.344-3 3 1.344 3 3 3z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" />
+                                        </svg>
+                                        <span class="text-sm font-lora">18k+ travelers</span>
+                                        <span class="text-sm font-lora">Luxor</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <span class="text-sm font-lora">Aswan</span>
+                                    </div>
+                                    <h3 class="font-PlayFair text-2xl font-bold mb-2">Egypt Classic Tours: Best Egypt
+                                        Trips</h3>
+                                    <p class="font-lora text-sm text-accent/90 max-lines-dest">Step into a world of
+                                        elegance with our carefully designed Egypt Luxury Tours,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination 3 -->
+                    <div class="swiper-slide lg:w-[300px]">
+                        <div class="overflow-hidden border-none bg-transparent group cursor-pointer rounded-lg">
+                            <div class="relative h-96 overflow-hidden rounded-lg">
+                                <img src="./assets/images/ValleyoftheKings.webp" alt="Dubai, UAE"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-accent">
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" width="16" height="16">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 11c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.344-3 3 1.344 3 3 3z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" />
+                                        </svg>
+                                        <span class="text-sm font-lora">25k+ travelers</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <span class="text-sm font-lora">Aswan</span>
+                                    </div>
+                                    <h3 class="font-PlayFair text-2xl font-bold mb-2">Best Nile Cruises Luxor and Aswan
+                                    </h3>
+                                    <p class="font-lora text-sm text-accent/90 max-lines-dest">Step into a world of
+                                        elegance with our carefully designed Egypt Luxury Tours,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination 4 -->
+                    <div class="swiper-slide lg:w-[300px]">
+                        <div class="overflow-hidden border-none bg-transparent group cursor-pointer rounded-lg">
+                            <div class="relative h-96 overflow-hidden rounded-lg">
+                                <img src="./assets/images/EgyptTours.webp" alt="Paris, France"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-accent">
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" width="16" height="16">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 11c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.344-3 3 1.344 3 3 3z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z" />
+                                        </svg>
+                                        <span class="text-sm font-lora">30k+ travelers</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 mb-2 text-gold">
+                                        <span class="text-sm font-lora">Luxor</span>
+                                    </div>
+                                    <h3 class="font-PlayFair text-2xl font-bold mb-2">Best Egypt Luxury Tours 2025/2026
+                                    </h3>
+                                    <p class="font-lora text-sm text-accent/90 max-lines-dest">Step into a world of
+                                        elegance with our carefully designed Egypt Luxury Tours, </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-background overflow-hidden">
+        <div class="container mx-auto px-4 flex items-start">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+
+
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="relative h-[300px] md:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                        <img src="./assets/images/sedra.png" alt="Sedra Travel Agency team"
+                            class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    </div>
+                    <!-- stylish shapes -->
+                    <div
+                        class="absolute -bottom-8 -right-8 bg-gold p-12 rounded-lg shadow-xl z-10 hidden md:block text-center">
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div>
+                    <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-foreground mb-6">
+                        About <span class="text-gold">Sedra</span>
+                    </h2>
+                    <p class="font-lora text-muted-foreground text-lg mb-6 leading-relaxed">
+                        Sedra Travel Agency has been crafting extraordinary travel experiences for over 15 years.
+                        We believe that every journey should be as unique as the traveler embarking on it.
+                    </p>
+                    <p class="font-lora text-muted-foreground text-lg mb-8 leading-relaxed">
+                        Our team of expert travel consultants works tirelessly to curate personalized itineraries
+                        that exceed expectations. From luxury escapes to cultural adventures, we handle every
+                        detail with precision and care.
+                    </p>
+
+                    <!-- Learn More Button -->
+                    <a href="about.html"
+                        class="inline-block bg-primary hover:bg-primary/90 text-accent font-lora px-8 py-6 uppercase tracking-wide">
+                        Learn More About Us
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & Videos Section -->
+    <section class="py-20 bg-gold/10">
+        <div class="container mx-auto px-4">
+
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-foreground mb-4"> What Our <span
+                        class="text-gold">Travelers Say</span> </h2>
+                <p class="font-lora text-muted-foreground text-lg max-w-2xl mx-auto"> Real experiences from real
+                    travelers who chose Sedra </p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex justify-center gap-6 mb-10 w-fit mx-auto bg-gold/10 rounded-xl p-2 shadow-lg">
+                <button data-tab="reviews"
+                    class="tab-btn active px-6 py-3 font-PlayFair text-xl rounded-lg transition-all duration-300">
+                    Reviews
+                </button>
+                <button data-tab="videos"
+                    class="tab-btn px-6 py-3 font-PlayFair text-xl rounded-lg transition-all duration-300">
+                    Videos
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <!-- Reviews Swiper -->
+            <div id="reviewsContent" class="tab-content reviews-swiper-container">
+                <div class="swiper testimonials-swiper max-w-8xl overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-card shadow-lg h-full border-none rounded-lg p-8 flex flex-col">
+                                <div class="flex gap-1 mb-4">
+                                    <!-- 5 Stars -->
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                </div>
+                                <p class="font-lora text-muted-foreground text-base leading-relaxed mb-6 max-lines">
+                                    "Sedra made our honeymoon in the Maldives absolutely perfect! Every detail was
+                                    thoughtfully planned, from the overwater villa to the private dinner on the beach.
+                                    Couldn't have asked for a better experience."
+                                </p>
+                                <div class="flex items-center gap-4 pt-4 border-t border-border">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+                                        alt="Sarah Johnson" class="w-14 h-14 rounded-full object-cover">
+                                    <div>
+                                        <p class="font-PlayFair font-bold text-foreground text-lg">Sarah Johnson</p>
+                                        <p class="font-lora text-sm text-muted-foreground">New York, USA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-card shadow-lg h-full border-none rounded-lg p-8 flex flex-col">
+
+                                <div class="flex gap-1 mb-4">
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                </div>
+                                <p class="font-lora text-muted-foreground text-base leading-relaxed mb-6 max-lines">
+                                    "The European tour package exceeded all expectations. The itinerary was
+                                    well-balanced, hotels were luxurious, and the local guides were knowledgeable. Sedra
+                                    truly understands luxury travel."
+                                </p>
+                                <div class="flex items-center gap-4 pt-4 border-t border-border">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                                        alt="Michael Chen" class="w-14 h-14 rounded-full object-cover">
+                                    <div>
+                                        <p class="font-PlayFair font-bold text-foreground text-lg">Michael Chen</p>
+                                        <p class="font-lora text-sm text-muted-foreground">Singapore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="bg-card shadow-lg h-full border-none rounded-lg p-8 flex flex-col">
+                                <!-- Stars -->
+                                <div class="flex gap-1 mb-4">
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="font-lora text-muted-foreground text-base leading-relaxed mb-6 max-lines">
+                                    "Sedra made our honeymoon in the Maldives absolutely perfect! Every detail was
+                                    thoughtfully planned, from the overwater villa to the private dinner on the beach.
+                                    Couldn't have asked for a better experience."
+                                </p>
+
+                                <!-- Author -->
+                                <div class="flex items-center gap-4 pt-4 border-t border-border">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+                                        alt="Sarah Johnson" class="w-14 h-14 rounded-full object-cover">
+                                    <div>
+                                        <p class="font-PlayFair font-bold text-foreground text-lg">Sarah Johnson</p>
+                                        <p class="font-lora text-sm text-muted-foreground">New York, USA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div class="bg-card shadow-lg h-full border-none rounded-lg p-8 flex flex-col">
+                                <!-- Stars -->
+                                <div class="flex gap-1 mb-4">
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                    <svg class="w-5 h-5 fill-gold text-gold" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .587l3.668 7.568L24 9.423l-6 5.853L19.336 24 12 19.897 4.664 24 6 15.276 0 9.423l8.332-1.268z" />
+                                    </svg>
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="font-lora text-muted-foreground text-base leading-relaxed mb-6 max-lines">
+                                    "Sedra made our honeymoon in the Maldives absolutely perfect! Every detail was
+                                    thoughtfully planned, from the overwater villa to the private dinner on the beach.
+                                    Couldn't have asked for a better experience."
+                                </p>
+
+                                <!-- Author -->
+                                <div class="flex items-center gap-4 pt-4 border-t border-border">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+                                        alt="Sarah Johnson" class="w-14 h-14 rounded-full object-cover">
+                                    <div>
+                                        <p class="font-PlayFair font-bold text-foreground text-lg">Sarah Johnson</p>
+                                        <p class="font-lora text-sm text-muted-foreground">New York, USA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="swiper-button-prev-test"></div>
+                    <div class="swiper-button-next-test"></div>
+                </div>
+            </div>
+
+            <!-- Videos Swiper -->
+            <div id="videosContent" class="tab-content videos-swiper-container hidden">
+                <div class="swiper videos-swiper max-w-8xl overflow-hidden">
+                    <!-- Navigation Arrows -->
+                    <div class="flex justify-start gap-4 mb-6">
+                        <button
+                            class="swiper-button-next-video w-10 h-10 flex items-center justify-center rounded-full border border-gold text-gold hover:text-white hover:bg-gold/90 shadow-md transition">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button
+                            class="swiper-button-prev-video w-10 h-10 flex items-center justify-center rounded-full border border-gold text-gold hover:text-white hover:bg-gold/90 shadow-md transition">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <!-- Video Slide 1 -->
+                        <div class="swiper-slide">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/mfxQy5A_tHs?si=1SRYSnGqHeL2rVLy"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/mfxQy5A_tHs?si=1SRYSnGqHeL2rVLy"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/mfxQy5A_tHs?si=1SRYSnGqHeL2rVLy"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/mfxQy5A_tHs?si=1SRYSnGqHeL2rVLy"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-background">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-foreground mb-4">
+                    Frequently Asked <span class="text-gold">Questions</span>
+                </h2>
+                <p class="font-lora text-muted-foreground text-lg">
+                    Everything you need to know about traveling with Sedra
+                </p>
+            </div>
+
+            <!-- Accordion using details/summary -->
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="border border-border rounded-lg bg-card">
+                    <summary
+                        class="font-PlayFair flex justify-between items-center text-lg text-foreground hover:text-gold transition-colors py-6 px-6 cursor-pointer list-none">
+                        <span>How do I book a travel package with Sedra?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="font-lora text-muted-foreground pb-6 px-6 leading-relaxed">
+                        Booking with Sedra is simple! Browse our packages, contact us through our website or phone, and
+                        our travel consultants will guide you through the entire process. We'll customize the package to
+                        your preferences and handle all arrangements.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="border border-border rounded-lg bg-card">
+                    <summary
+                        class="font-PlayFair text-lg flex justify-between items-center text-foreground hover:text-gold transition-colors py-6 px-6 cursor-pointer list-none">
+                        <span>
+                            What is included in your travel packages?
+                        </span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="font-lora text-muted-foreground pb-6 px-6 leading-relaxed">
+                        Our packages typically include accommodation, transportation, guided tours, and select meals.
+                        Specific inclusions vary by package. We provide detailed itineraries outlining everything
+                        included, and we can customize packages to add or remove services based on your preferences.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="border border-border rounded-lg bg-card">
+                    <summary
+                        class="font-PlayFair text-lg flex justify-between items-center text-foreground hover:text-gold transition-colors py-6 px-6 cursor-pointer list-none">
+                        <span>Do you offer travel insurance?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="font-lora text-muted-foreground pb-6 px-6 leading-relaxed">
+                        Yes, we strongly recommend travel insurance and can help arrange comprehensive coverage for your
+                        trip. This includes medical emergencies, trip cancellations, lost luggage, and more. Our team
+                        will explain all available options during the booking process.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="border border-border rounded-lg bg-card">
+                    <summary
+                        class="font-PlayFair text-lg flex justify-between items-center text-foreground hover:text-gold transition-colors py-6 px-6 cursor-pointer list-none">
+                        <span>Can I customize an existing package?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="font-lora text-muted-foreground pb-6 px-6 leading-relaxed">
+                        Absolutely! All our packages are fully customizable. Whether you want to extend your stay, add
+                        activities, upgrade accommodations, or modify the itinerary, our consultants will work with you
+                        to create your perfect journey.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="border border-border rounded-lg bg-card">
+                    <summary
+                        class="font-PlayFair text-lg flex justify-between items-center text-foreground hover:text-gold transition-colors py-6 px-6 cursor-pointer list-none">
+                        <span>What is your cancellation policy?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="font-lora text-muted-foreground pb-6 px-6 leading-relaxed">
+                        Our cancellation policy varies depending on the package and timing. Generally, cancellations
+                        made 60+ days before departure receive a full refund minus a small processing fee. For
+                        cancellations closer to departure, fees may apply. We recommend travel insurance to protect your
+                        investment.
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details class="border border-border rounded-lg bg-card">
+                    <summary
+                        class="font-PlayFair text-lg flex justify-between items-center text-foreground hover:text-gold transition-colors py-6 px-6 cursor-pointer list-none">
+                        <span>Do you provide visa assistance?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="font-lora text-muted-foreground pb-6 px-6 leading-relaxed">
+                        Yes, we provide comprehensive visa assistance for all destinations. Our team will guide you
+                        through the requirements, help with documentation, and ensure you have everything needed for a
+                        smooth entry to your destination country.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Multimedia / Instagram Section -->
+    <section id="media" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-accent mb-4">
+                    Follow Our <span class="text-gold">Journey</span>
+                </h2>
+                <p class="font-lora text-accent/80 text-lg mb-6">
+                    Get inspired by our travelers' adventures on Instagram
+                </p>
+                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D"
+                    target="_blank"
+                    class="inline-flex items-center border border-gold text-gold hover:bg-gold hover:text-primary font-lora uppercase tracking-wide px-6 py-3 rounded transition">
+                    <!-- Instagram Icon -->
+                    <i class="fa-brands fa-instagram mr-1"></i>
+                    Follow @Sedratravelinc
+                </a>
+            </div>
+
+            <!-- Instagram Grid -->
+            <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                 Post 1 -->
+            <!-- <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="./assets/images/sedra.png" alt="Beautiful sunset beach view"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-[28px] text-accent"></i>
+                    </div>
+                </div> -->
+
+            <!-- Post 2 -->
+            <!-- <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="./assets/images/sedra2.png" alt="Mountain landscape"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-[28px] text-accent"></i>
+                    </div>
+                </div> -->
+
+            <!-- Post 3 -->
+            <!-- <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="./assets/images/sedra3.png" alt="Beautiful sunset beach view"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-[28px] text-accent"></i>
+                    </div>
+                </div> -->
+            <!-- </div>  -->
+
+            <div class="max-w-5xl mx-auto">
+                <iframe src="https://snapwidget.com/embed/your-widget-id"
+                    class="w-full h-[500px] border-none overflow-hidden rounded-lg" scrolling="no"
+                    allowtransparency="true">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA / Newsletter Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <!-- Heading -->
+                <h2 class="font-PlayFair text-4xl md:text-5xl font-bold text-primary mb-6">
+                    Ready to Start Your <span class="text-gold">Adventure?</span>
+                </h2>
+                <!-- Description -->
+                <p class="font-Lora text-primary/80 text-lg mb-8">
+                    Subscribe to our newsletter and receive exclusive travel deals, destination guides,
+                    and insider tips delivered straight to your inbox.
+                </p>
+
+                <!-- Input + Button -->
+                <div class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-8">
+                    <input type="email" placeholder="Enter your email address"
+                        class="bg-primary/10 border border-primary/30 text-primary placeholder:text-primary/50 font-Lora h-12 px-4 w-full rounded" />
+                    <button
+                        class="bg-gold hover:bg-gold/90 text-primary font-Lora px-8 h-12 uppercase tracking-wide whitespace-nowrap flex items-center justify-center gap-2 rounded transition">
+                        Subscribe
+                        <!-- ArrowRight Icon -->
+                        <i
+                            class="fa-solid fa-arrow-right-long text-[20px] transition-transform group-hover:translate-x-1"></i>
+                    </button>
+                </div>
+
+                <!-- Contact Info -->
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-center gap-4 text-primary/70 font-Lora text-sm">
+                    <span>Or contact us directly:</span>
+                    <a href="contact.html" class="hover:text-gold transition-colors">
+                        contact us
+                    </a>
+                    <span class="hidden sm:inline">|</span>
+                    <a href="tel:+1234567890" class="hover:text-gold transition-colors">
+                        +1 (626) 353-4268
+                    </a>
+                    <span class="hidden sm:inline">|</span>
+                    <a href="mailto:Sedratravelinc@gmail.com" class="hover:text-gold transition-colors">
+                        Sedratravelinc@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-accent pt-12 pb-2">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Logo and Description -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-1">
+                        <img src="./assets/images/sedraLogo.png" class="w-32 h-11" alt="sedra Travel">
+                    </div>
+                    <p class="font-Lora text-accent/70 text-sm leading-relaxed">
+                        At Sedra Travel, our mission is to be the most trusted and reliable partner for Muslims in the
+                        USA embarking on their sacred journeys of Umrah and Hajj. We aim to inspire and support our
+                        community by providing seamless, spiritually enriching, and unforgettable travel experiences
+                        that honor the significance of these holy pilgrimages.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-PlayFair text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 font-Lora text-sm">
+                        <li><a href="about.html" class="text-accent/70 hover:text-gold transition-colors">About Us</a>
+                        </li>
+                        <li><a href="faq.html" class="text-accent/70 hover:text-gold transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-accent/70 hover:text-gold transition-colors">Contact</a>
+                        </li>
+                        <li><a href="packages.html"
+                                class="text-accent/70 hover:text-gold transition-colors">Packages</a>
+                        </li>
+                        <li><a href="destinations.html"
+                                class="text-accent/70 hover:text-gold transition-colors">Destinations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-PlayFair text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-2 font-Lora text-sm text-accent/70">
+                        <li><a href="tel:+1234567890" class="hover:text-gold transition-colors"> +1 (626) 353-4268</a>
+                        </li>
+                        <li><a href="mailto:Sedratravelinc@gmail.com"
+                                class="hover:text-gold transition-colors">Sedratravelinc@gmail.com</a>
+                        </li>
+                        <li class="pt-4">
+                            <div class="flex gap-4">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/sedratravelinc/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D"
+                                    target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our Instagram">
+                                    <i class="fa-brands fa-instagram text-[20px]"></i>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/sedratravelinc?mibextid=LQQJ4d" target="_blank"
+                                    rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our Facebook">
+                                    <i class="fa-brands fa-square-facebook text-[20px]"></i>
+                                </a>
+                                <!-- TikTok -->
+                                <a href="https://www.tiktok.com/@sedratravelinc?_t=ZP-8s0Y4iuHXo6&_r=1" target="_blank"
+                                    rel="noopener noreferrer" class="hover:text-gold transition-colors"
+                                    aria-label="Visit our TikTok">
+                                    <i class="fa-brands fa-tiktok text-[20px]"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container h-px w-full bg-accent/20 mb-2"></div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center text-xs text-accent/60">
+                Copyright © 2025 Sedra Travel . All Right Reserved. Powered By
+                <a href="https://www.mv-is.com/" target="_blank">
+                    Master Vision Integrated Solutions
+                </a> &
+                <a href="https://www.wedo-eg.com/en" target="_blank">
+                    We Do
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
